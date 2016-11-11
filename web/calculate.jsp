@@ -1,8 +1,7 @@
 <%-- 
     Document   : calculate
     Created on : Oct 25, 2016, 3:14:39 PM
-    Author     : Jasmine
-    Copyright  : Jasmine Jones & Jacob Wells
+    Copyright  : Jasmine Jones & Jacob Wells & Sarah Allen
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -39,11 +38,16 @@
     </tr>
   </c:forEach>
 
+    <tr>
+      <td>
+        <form id="form" action="" method="get">
+        <input type="hidden" name="action" value="join">
+        <input type="submit" id="return" value="Return to Calculator">
+    </form>
+      </td>
+    </tr>
 </table>
 
-    <form action="" method="get">
-        <input type="hidden" name="action" value="join">
-        <input type="submit" value="Return to Calculator">
-    </form>
+
     
 <c:import url="/includes/footer.jsp" />

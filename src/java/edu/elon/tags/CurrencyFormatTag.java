@@ -12,7 +12,7 @@ import javax.servlet.jsp.JspWriter;
 import javax.servlet.jsp.tagext.TagSupport;
 
 /**
- * @author Jacob_Wells
+ * Copyright: Jacob Wells & Sarah Allen
  */
 public class CurrencyFormatTag extends TagSupport{
   

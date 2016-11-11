@@ -1,8 +1,7 @@
 <%-- 
     Document   : index
     Created on : Oct 25, 2016, 2:46:42 PM
-    Author     : Jasmine
-    Copyright  : Jasmine Jones & Jacob Wells
+    Copyright  : Jasmine Jones & Jacob Wells & Sarah Allen
 --%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 

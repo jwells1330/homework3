@@ -1,7 +1,6 @@
 /* 
     Created on : Oct 25, 2016, 2:53:11 PM
-    Author     : Jasmine
-    Copyright  : Jasmine Jones & Jacob Wells
+    Copyright  : Jasmine Jones & Jacob Wells & Sarah Allen
 */
 
 body {
@@ -36,7 +35,6 @@ body>p:last-of-type {
 #errorHeader h1 {
   display: block;
   margin: 1em;
-  border: aqua 2px solid;
 }
 
 main {
@@ -45,7 +43,6 @@ main {
 
 #errorMain {
   display: block;
-  border: darkgreen 2px solid;
 }
 
 form {
@@ -76,18 +73,24 @@ label {
   text-align: right;
 }
 
-input {
-  border-width: .1em;
-  display: inline-block;
-  order: 2;
-  width: 22em;
+#return {
+  background-color: white;
+  border: none;
+  color: blue;
+  text-decoration: underline;
 }
 
+th:first-child {
+  text-align: center;
+}
+
+#return:hover {
+  color: orange;
+}
 
 span {
   text-align: left;
 }
-
 
 form>p {
   text-align: right;

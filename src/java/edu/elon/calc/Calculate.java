@@ -10,10 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 /**
- * Copyright: Jasmine Jones & Jacob Wells
- *
- * @author jwells8
- * 
+ * Copyright: Jasmine Jones & Jacob Wells & Sarah Allen
  * RHC LINK: http://appsbyjacobwells-jwells1330.rhcloud.com/homework2/
  *
  */
@@ -94,15 +91,4 @@ public class Calculate extends HttpServlet {
           throws ServletException, IOException {
     processRequest(request, response);
   }
-
-  /**
-   * Returns a short description of the servlet.
-   *
-   * @return a String containing servlet description
-   */
-  @Override
-  public String getServletInfo() {
-    return "Short description";
-  }
-
 }

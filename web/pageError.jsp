@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!--
-Copyright: Jasmine Jones & Jacob Wells
+Copyright: Jasmine Jones & Jacob Wells & Sarah Allen
 -->
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 

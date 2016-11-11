@@ -4,9 +4,7 @@ import java.io.Serializable;
 import java.text.NumberFormat;
 
 /**
- * Copyright: Jasmine Jones & Jacob Wells
- *
- * @author Jacob_Wells
+ * Copyright: Jasmine Jones & Jacob Wells & Sarah Allen
  */
 public class Calculation implements Serializable {
 
@@ -33,9 +31,6 @@ public class Calculation implements Serializable {
 
   public void doInterestCalculation() {
     for(int i = 0; i<years; i++){
-//      double value = investment * (Math.pow((1 + (.01 * interest)), i+1));
-//      NumberFormat currencyFormatter = NumberFormat.getCurrencyInstance();
-//      valuesList[i] = currencyFormatter.format(value);
         valuesList[i] = investment * (Math.pow((1 + (.01 * interest)), i+1));
     }
     finalAmount = investment * (Math.pow((1 + (.01 * interest)), years));
@@ -43,8 +38,7 @@ public class Calculation implements Serializable {
   }
 
   public double getInvestment() {
-//    NumberFormat currencyFormatter = NumberFormat.getCurrencyInstance();
-//    return currencyFormatter.format(investment);
+
       return investment;
   }
 
@@ -57,8 +51,6 @@ public class Calculation implements Serializable {
   }
 
   public double getFinalAmount() {
-//    NumberFormat currencyFormatter = NumberFormat.getCurrencyInstance();
-//    return currencyFormatter.format(finalAmount);
   return finalAmount;
   }
   public double [] getValuesList(){
