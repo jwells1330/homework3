@@ -39,8 +39,11 @@
     </tr>
   </c:forEach>
 
-
-
 </table>
 
+    <form action="" method="get">
+        <input type="hidden" name="action" value="join">
+        <input type="submit" value="Return to Calculator">
+    </form>
+    
 <c:import url="/includes/footer.jsp" />

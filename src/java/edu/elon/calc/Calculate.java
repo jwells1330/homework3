@@ -7,6 +7,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  * Copyright: Jasmine Jones & Jacob Wells
@@ -31,7 +32,7 @@ public class Calculate extends HttpServlet {
           HttpServletResponse response)
           throws ServletException, IOException {
     response.setContentType("text/html;charset=UTF-8");
-    String url;
+    String url = "/index.jsp";
     String action = request.getParameter("action");
 
     if (action == null) {
@@ -41,7 +42,8 @@ public class Calculate extends HttpServlet {
     if (action.equals("join")) {
       System.out.println("Going to Index");
       url = "/index.jsp";
-      getServletContext().getRequestDispatcher(url).forward(request, response);
+        
+//      getServletContext().getRequestDispatcher(url).forward(request, response);
     } else if (request.getParameter("action").equals("add")) {
       int investment = Integer.parseInt(request.getParameter("amount"));
       int interestRate = Integer.parseInt(request.getParameter("interest"));
@@ -54,10 +56,15 @@ public class Calculate extends HttpServlet {
       Calculation calculation = new Calculation(investment, interestRate, years);
       calculation.doInterestCalculation();
 
+            HttpSession session = request.getSession();
+        session.setAttribute("investment", (int)(calculation.getInvestment()));
+        session.setAttribute("interest", (int) (calculation.getInterest()));
+        
       request.setAttribute("calculation", calculation);
       url = "/calculate.jsp";
-      getServletContext().getRequestDispatcher(url).forward(request, response);
+//      getServletContext().getRequestDispatcher(url).forward(request, response);
     }
+    getServletContext().getRequestDispatcher(url).forward(request, response);
   }
 
   /**
