@@ -14,7 +14,7 @@ public class Calculation implements Serializable {
   private double interest;
   private double years;
   private double finalAmount;
-  private String[] valuesList;
+  private double[] valuesList;
 
   public Calculation() {
     investment = 0;
@@ -27,23 +27,25 @@ public class Calculation implements Serializable {
     this.investment = investment;
     this.interest = interest;
     this.years = years;
-    this.valuesList = new String[(int)(years)];
+    this.valuesList = new double[(int)(years)];
     finalAmount = 0;
   }
 
   public void doInterestCalculation() {
     for(int i = 0; i<years; i++){
-      double value = investment * (Math.pow((1 + (.01 * interest)), i+1));
-      NumberFormat currencyFormatter = NumberFormat.getCurrencyInstance();
-      valuesList[i] = currencyFormatter.format(value);
+//      double value = investment * (Math.pow((1 + (.01 * interest)), i+1));
+//      NumberFormat currencyFormatter = NumberFormat.getCurrencyInstance();
+//      valuesList[i] = currencyFormatter.format(value);
+        valuesList[i] = investment * (Math.pow((1 + (.01 * interest)), i+1));
     }
     finalAmount = investment * (Math.pow((1 + (.01 * interest)), years));
     
   }
 
-  public String getInvestment() {
-    NumberFormat currencyFormatter = NumberFormat.getCurrencyInstance();
-    return currencyFormatter.format(investment);
+  public double getInvestment() {
+//    NumberFormat currencyFormatter = NumberFormat.getCurrencyInstance();
+//    return currencyFormatter.format(investment);
+      return investment;
   }
 
   public double getInterest() {
@@ -54,11 +56,12 @@ public class Calculation implements Serializable {
     return (int) (years);
   }
 
-  public String getFinalAmount() {
-    NumberFormat currencyFormatter = NumberFormat.getCurrencyInstance();
-    return currencyFormatter.format(finalAmount);
+  public double getFinalAmount() {
+//    NumberFormat currencyFormatter = NumberFormat.getCurrencyInstance();
+//    return currencyFormatter.format(finalAmount);
+  return finalAmount;
   }
-  public String[] getValuesList(){
+  public double [] getValuesList(){
     return valuesList;
   }
   
@@ -78,7 +81,7 @@ public class Calculation implements Serializable {
     this.finalAmount = finalAmount;
   }
   
-  public void setValuesList(String[] valuesList){
+  public void setValuesList(double[] valuesList){
     this.valuesList = valuesList;
   }
 }

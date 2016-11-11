@@ -8,12 +8,13 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
 <%@taglib  prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@taglib  prefix="elon" uri="/WEB-INF/tlds/elon.tld" %>
 <c:import url="/includes/header.html" />
 
 <table id="values">
   <tr>
     <td id="right"><label>Investment Amount:</label></td>
-    <td><span>${calculation.investment}</span></td>
+    <td><span><elon:currencyFormat value="${calculation.investment}"/></span></td>
   </tr>
 
   <tr>
@@ -34,7 +35,7 @@
   <c:forEach var="i" begin="0" end = "${calculation.years - 1}">
     <tr>
       <td id="years"><label><c:out value = "${i+1}"/></label></td>
-      <td><span><c:out value = "${calculation.valuesList[i]}"/></span></td>
+      <td><span><elon:currencyFormat value="${calculation.valuesList[i]}"/></span></td>
     </tr>
   </c:forEach>
 
