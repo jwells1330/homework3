@@ -11,7 +11,7 @@ import javax.servlet.http.HttpSession;
 
 /**
  * Copyright: Jasmine Jones & Jacob Wells & Sarah Allen
- * RHC LINK: http://appsbyjacobwells-jwells1330.rhcloud.com/homework2/
+ * RHC LINK: http://appsbyjacobwells-jwells1330.rhcloud.com/homework3/
  *
  */
 public class Calculate extends HttpServlet {
